@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+.image-container {
+  max-width: 100%;
+  margin: 20px auto;
+}
+.image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-fit: cover;
+}
+*/
+img {/* To not display the image because it won't look good*/
+  height: 0;
+  width: 0;
+}
+
+.bg-img {/*To display the properties of the logo*/
+  background-image: url('cropped-newlogo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 315px;
+  width: 100%;
+}
+
+.caption {
+  color: #0D244F;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav {
+  height: 60px;
+  background-color: #0D244F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  color: #f0f0f0;
+}
+
+.toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/*CSS style for MWF*/
+
+.mwf{
+  color: goldenrod;
+  margin: 10%;
+  margin-bottom: 0%;
+  padding: 0;
+  text-align: center;
+}
+
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;/*To reduce the gap between 4 grids*/
+  padding: 20px;
+  padding-top: 0px;
+  height: auto; /* Changed the height from 300px to auto */
+  width: 80%;
+  text-align: center;
+  vertical-align: text-bottom;
+  margin: 1%; /* Reduced the margin from 10% to 1% to avoid overlap */
+  margin-top: 0%;
+  margin: auto;
+}
+
+.blue, .green, .pink, .orange {
+  color: white;
+  padding: 20px;
+}
+
+/*Border Raduis*/
+.blue{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.orange{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/*Banner Color background*/
+.blue {
+  background-color: #737495;
+}
+
+.green {
+  background-color: #68A8AD;
+}
+
+.pink {
+  background-color: #2F8BBF;
+}
+
+.orange {
+  background-color: #F17080;
+}
+
+.banner h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .banner {
+      grid-template-columns: 1fr;
+  }
+  .blue{
+      border-radius: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.orange{
+  border-radius: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+}
+
+
+
+@media (max-width: 768px) {
+  .menu {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #0D244F;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bg-img {/*Do not display the properties of the image logo*/
+    background-image: url('cropped-newlogo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 0px;
+    width: 0;
+  }
+
+  img {
+    background-image: url(cropped-newlogo.jpg);
+    height: auto;
+    width: 100%;
+  }
+
+  .menu li {
+      margin: 10px 0;
+  }
+
+  .toggle {
+      display: block;
+  }
+}
+
+.active {
+  display: block;
+}
+
+/*CSS for the Welcome text*/
+.num{
+  display: block;
+  color: rgb(0, 0, 106);
+  font-weight: bolder;
+  font-size: 30px;
+}
+.box{
+  display: inline-block;
+}
+.box{
+  margin: 1%;
+  text-align: center;
+}
+.unic{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 1%; /* Reduced the margin from 10% to 1% to avoid overlap */
+  padding: 10px; /* Added some padding to create some space */
+}
+.welcome{
+  width: 800px;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 10px; /* Added some margin to create some space */
+  padding: 10px; /* Added some padding to create some space */
+}
+.socio{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 1%; /* Reduced the margin from 10% to 1% to avoid overlap */
+  margin-top: 0;
+/* border: 1px solid black;*/
+  text-align: center;
+  width: auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+footer{
+  margin-bottom: 0;
+}
+.social{
+  text-decoration: none;
+}
+.social:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
+@media (max-width: 768px) {
+  .unic{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box{
+    border-top:1px solid rgb(209, 208, 208) ;
+    padding: 10px;
+  }
+  .welcome{
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+}
